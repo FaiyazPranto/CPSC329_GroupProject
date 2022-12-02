@@ -125,7 +125,7 @@ public class GameController {
         File quest_file = new File(String.format(file_p, l));
         BufferedReader br = new BufferedReader(new FileReader(quest_file));
         while ((line = br.readLine()) != null) {
-            String[] question_array = line.split(",");
+            String[] question_array = line.split(";");
             string8[j] = question_array;
             j++;
         }
