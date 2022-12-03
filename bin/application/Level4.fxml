@@ -10,15 +10,15 @@
    <children>
       <AnchorPane prefHeight="614.0" prefWidth="696.0" style="-fx-background-color: linen;">
          <children>
-            <Label id="questionName" fx:id="Question_label" layoutX="54.0" layoutY="69.0" text="1.Which of the following is not an example of InfoSec?">
+            <Label id="questionName" fx:id="Question_label" layoutX="54.0" layoutY="69.0" text="1.Which of the following is not a type of biometric password?">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <CheckBox id="choice1" fx:id="option1" layoutX="31.0" layoutY="126.0" mnemonicParsing="false" text="Data/System is seen only be the authorized people" />
-            <CheckBox id="choice2" fx:id="option2" layoutX="31.0" layoutY="170.0" mnemonicParsing="false" text="Data/System is changed only as specified by the system" />
-            <CheckBox id="choice3" fx:id="option3" layoutX="31.0" layoutY="211.0" mnemonicParsing="false" text="Data/System is up when we want it" />
-            <CheckBox id="choice4" fx:id="option4" layoutX="31.0" layoutY="253.0" mnemonicParsing="false" text="Data/System gets updated every week" />
+            <CheckBox id="choice1" fx:id="option1" layoutX="31.0" layoutY="126.0" mnemonicParsing="false" text="Hand geometry" />
+            <CheckBox id="choice2" fx:id="option2" layoutX="31.0" layoutY="170.0" mnemonicParsing="false" text="Retinal Pattern" />
+            <CheckBox id="choice3" fx:id="option3" layoutX="31.0" layoutY="211.0" mnemonicParsing="false" text="Draw-a-secret" />
+            <CheckBox id="choice4" fx:id="option4" layoutX="31.0" layoutY="253.0" mnemonicParsing="false" text="Voice" />
             <Button id="nextQuestion" fx:id="Next_button" layoutX="591.0" layoutY="321.0" mnemonicParsing="false" onAction="#go_next" text="Next &gt;" />
             <Button id="submitButton" fx:id="Submit_button" layoutX="495.0" layoutY="321.0" mnemonicParsing="false" onAction="#validate" text="Submit" />
             <TextArea id="questionTextArea" fx:id="Hint_box" layoutX="13.0" layoutY="366.0" prefHeight="227.0" prefWidth="671.0" />

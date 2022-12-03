@@ -25,7 +25,7 @@
             </Label>
             <Button id="level1Start" fx:id="level1" layoutX="298.0" layoutY="141.0" mnemonicParsing="false" onAction="#openLevel1" text="Start!" textFill="#44c26b" />
             <Label id="level1Score" fx:id="label1" layoutX="406.0" layoutY="146.0" text="Score: 0/10" />
-            <Label id="totalScore" fx:id="main_label" layoutX="209.0" layoutY="565.0" text="Total Score: 0/60">
+            <Label id="totalScore" fx:id="main_label" layoutX="261.0" layoutY="565.0" text="    ">
                <font>
                   <Font size="24.0" />
                </font>

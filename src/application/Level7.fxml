@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="1042.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LevelsController">
+   <children>
+      <AnchorPane prefHeight="607.0" prefWidth="1086.0" style="-fx-background-color: linen;">
+         <children>
+            <Label id="questionName" fx:id="Question_label" layoutX="54.0" layoutY="69.0" text="1. What are the benefits of computers using the Binary Number System?">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <CheckBox id="choice1" fx:id="option1" layoutX="31.0" layoutY="126.0" mnemonicParsing="false" text="Binary Number System is an exact copy of the Decimal Number System,making it easy for both humans and computers to read the same number" />
+            <CheckBox id="choice2" fx:id="option2" layoutX="31.0" layoutY="170.0" mnemonicParsing="false" text="Binary numbers can be perfectly stored and reproduced by computers" />
+            <CheckBox id="choice3" fx:id="option3" layoutX="31.0" layoutY="211.0" mnemonicParsing="false" text="Binary numbers are perfect for computers who are easily able to store three different bit states for each binary digit" />
+            <CheckBox id="choice4" fx:id="option4" layoutX="31.0" layoutY="253.0" mnemonicParsing="false" text="Binary numbers can be perfectly stored and reproduced by computers;Binary numbers are perfect for computers who are easily able to store three different bit states for each binary digit;Binary numbers are better for computers than decimal numbers as computers have difficulty determining value of numbers by digit position" />
+            <Button id="nextQuestion" fx:id="Next_button" layoutX="591.0" layoutY="321.0" mnemonicParsing="false" onAction="#go_next" text="Next &gt;" />
+            <Button id="submitButton" fx:id="Submit_button" layoutX="495.0" layoutY="321.0" mnemonicParsing="false" onAction="#validate" text="Submit" />
+            <TextArea id="questionTextArea" fx:id="Hint_box" layoutX="13.0" layoutY="366.0" prefHeight="227.0" prefWidth="671.0" />
+            <Button id="hintButton" fx:id="Hint_button" layoutX="31.0" layoutY="321.0" mnemonicParsing="false" onAction="#give_hint" text="Hint! (-1 point)" />
+            <ProgressBar id="progressBar" layoutX="429.0" layoutY="36.0" prefWidth="200.0" progress="0.0" />
+            <Label layoutX="643.0" layoutY="37.0" prefHeight="21.0" prefWidth="41.0" text="0%" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

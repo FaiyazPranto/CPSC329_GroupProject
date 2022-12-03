@@ -61,12 +61,13 @@ public class LevelsController<option1> {
 
 
 	public LevelsController() throws FileNotFoundException {
-
+		string8 = GameController.get_array();
+		level_point = 0;
 	}
 
 	@FXML
 	void go_next(ActionEvent event) throws IOException {
-		if (check == true) {
+		if ((check == true) && i<string8.length) {
 			//if (option1.isSelected() || option2.isSelected() || option3.isSelected() || option4.isSelected()) {
 				Hint_box.clear();
 
@@ -87,10 +88,9 @@ public class LevelsController<option1> {
 					i++;
 					if(i == string8.length){
 						Next_button.setText("End");
+						GameController.seto_point(level_point);
 					}
 
-				}else{
-					GameController.seto_point(a);
 				}
 
 				check = false;
@@ -106,8 +106,12 @@ public class LevelsController<option1> {
 			 /*else {
 				Hint_box.setText("Please Select an option!!");
 			}*/
-		} else {
+		} else if(i<string8.length){
 			Hint_box.setText("Please click submit first!!");
+		}
+		else {
+			Stage stage = (Stage) Next_button.getScene().getWindow();
+			stage.close();
 		}
 
 	}
@@ -160,6 +164,8 @@ public class LevelsController<option1> {
 
 	@FXML
 	void give_hint(ActionEvent event) {
+		Hint_box.setText(string8[i-1][string8[i].length-1]);
+		level_point-=1;
 
 	}
 
