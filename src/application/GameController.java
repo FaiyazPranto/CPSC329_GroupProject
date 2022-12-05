@@ -30,6 +30,14 @@ public class GameController {
     int lvl;
     public static int o_point = 0;
     String points = "Total Score: %d/320";
+    Boolean check_1 = false;
+    Boolean check_2 = false;
+    Boolean check_3 = false;
+    Boolean check_4 = false;
+    Boolean check_5 = false;
+    Boolean check_6 = false;
+    Boolean check_7 = false;
+    Boolean check_8 = false;
 	
 	@FXML
     private Button level5;
@@ -119,33 +127,35 @@ public class GameController {
     
     @FXML
     void openLevel8(ActionEvent level1Start) throws Exception {
-        lvl = 8;
-        l = 8;
-        j=0;
-        string8 = new String[20][8];
-
-        File quest_file = new File(String.format(file_p, l));
-        BufferedReader br = new BufferedReader(new FileReader(quest_file));
-        while ((line = br.readLine())!= null) {
-            String[] question_array = line.split(";");
-            string8[j] = question_array;
-            j++;
-        }
-        
-        String path = String.format("src/application/Level%d.fxml", lvl);
-        String title = String.format("Level %d", lvl);
-    	FXMLLoader fxmlLoader = new FXMLLoader();
-        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-        Scene scene1 = new Scene(child1, 700,600);
-
-
-		Stage secondaryStage = new Stage();
-		secondaryStage.setTitle(title);
-		secondaryStage.setScene(scene1);
-
-
-		secondaryStage.show();
-
+    	
+	        lvl = 8;
+	        l = 8;
+	        j=0;
+	        string8 = new String[20][8];
+	
+	        File quest_file = new File(String.format(file_p, l));
+	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
+	        while ((line = br.readLine())!= null) {
+	            String[] question_array = line.split(";");
+	            string8[j] = question_array;
+	            j++;
+	        }
+	        
+	        String path = String.format("src/application/Level%d.fxml", lvl);
+	        String title = String.format("Level %d", lvl);
+	    	FXMLLoader fxmlLoader = new FXMLLoader();
+	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
+	        Scene scene1 = new Scene(child1, 700,600);
+	
+	
+			Stage secondaryStage = new Stage();
+			secondaryStage.setTitle(title);
+			secondaryStage.setScene(scene1);
+	
+	
+			secondaryStage.show();
+    	
+    	
     }
 
     private Object quizAnswers(Scene level1Scene) {
@@ -154,224 +164,245 @@ public class GameController {
 
 	@FXML
     void openLevel2(ActionEvent event) throws IOException {
-		lvl = 2;
-        l = 2;
-        j=0;
-        string8 = new String[7][8];
-
-        File quest_file = new File(String.format(file_p, l));
-        BufferedReader br = new BufferedReader(new FileReader(quest_file));
-        while ((line = br.readLine())!= null) {
-            String[] question_array = line.split(";");
-            string8[j] = question_array;
-            j++;
-        }
-        
-        String path = String.format("src/application/Level%d.fxml", lvl);
-        String title = String.format("Level %d", lvl);
-    	FXMLLoader fxmlLoader = new FXMLLoader();
-        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-        Scene scene1 = new Scene(child1, 700,600);
-
-
-		Stage secondaryStage = new Stage();
-		secondaryStage.setTitle(title);
-		secondaryStage.setScene(scene1);
-
-
-		secondaryStage.show();
+		if(check_2 = false) {
+			lvl = 2;
+	        l = 2;
+	        j=0;
+	        string8 = new String[7][8];
+	
+	        File quest_file = new File(String.format(file_p, l));
+	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
+	        while ((line = br.readLine())!= null) {
+	            String[] question_array = line.split(";");
+	            string8[j] = question_array;
+	            j++;
+	        }
+	        
+	        String path = String.format("src/application/Level%d.fxml", lvl);
+	        String title = String.format("Level %d", lvl);
+	    	FXMLLoader fxmlLoader = new FXMLLoader();
+	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
+	        Scene scene1 = new Scene(child1, 700,600);
+	
+	
+			Stage secondaryStage = new Stage();
+			secondaryStage.setTitle(title);
+			secondaryStage.setScene(scene1);
+	
+	
+			secondaryStage.show();
+			check_2 = true;
+		}
 
 
     }
 
     @FXML
     void openLevel3(ActionEvent event) throws IOException, IOException {
-    	lvl = 3;
-        l = 3;
-        j=0;
-        string8 = new String[6][8];
-
-        File quest_file = new File(String.format(file_p, l));
-        BufferedReader br = new BufferedReader(new FileReader(quest_file));
-        while ((line = br.readLine())!= null) {
-            String[] question_array = line.split(";");
-            string8[j] = question_array;
-            j++;
-        }
-        br.close();
-        String path = String.format("src/application/Level%d.fxml", lvl);
-        String title = String.format("Level %d", lvl);
-    	FXMLLoader fxmlLoader = new FXMLLoader();
-        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-        Scene scene1 = new Scene(child1, 700,600);
-
-
-		Stage secondaryStage = new Stage();
-		secondaryStage.setTitle(title);
-		secondaryStage.setScene(scene1);
-
-
-		secondaryStage.show();
+    	if(check_3 = false) {
+	    	lvl = 3;
+	        l = 3;
+	        j=0;
+	        string8 = new String[6][8];
+	
+	        File quest_file = new File(String.format(file_p, l));
+	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
+	        while ((line = br.readLine())!= null) {
+	            String[] question_array = line.split(";");
+	            string8[j] = question_array;
+	            j++;
+	        }
+	        br.close();
+	        String path = String.format("src/application/Level%d.fxml", lvl);
+	        String title = String.format("Level %d", lvl);
+	    	FXMLLoader fxmlLoader = new FXMLLoader();
+	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
+	        Scene scene1 = new Scene(child1, 700,600);
+	
+	
+			Stage secondaryStage = new Stage();
+			secondaryStage.setTitle(title);
+			secondaryStage.setScene(scene1);
+	
+	
+			secondaryStage.show();
+			check_3=true;
+    	}
     }
 
     @FXML
     void openLevel4(ActionEvent event) throws IOException, IOException {
-    	lvl = 4;
-        l = 4;
-        j=0;
-        string8 = new String[10][8];
-
-        File quest_file = new File(String.format(file_p, l));
-        BufferedReader br = new BufferedReader(new FileReader(quest_file));
-        while ((line = br.readLine())!= null) {
-            String[] question_array = line.split(";");
-            string8[j] = question_array;
-            j++;
-        }
-        br.close();
-        
-        String path = String.format("src/application/Level%d.fxml", lvl);
-        String title = String.format("Level %d", lvl);
-    	FXMLLoader fxmlLoader = new FXMLLoader();
-        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-        Scene scene1 = new Scene(child1, 700,600);
-
-
-		Stage secondaryStage = new Stage();
-		secondaryStage.setTitle(title);
-		secondaryStage.setScene(scene1);
-
-
-		secondaryStage.show();
+    	if(check_4 = false) {
+	    	lvl = 4;
+	        l = 4;
+	        j=0;
+	        string8 = new String[10][8];
+	
+	        File quest_file = new File(String.format(file_p, l));
+	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
+	        while ((line = br.readLine())!= null) {
+	            String[] question_array = line.split(";");
+	            string8[j] = question_array;
+	            j++;
+	        }
+	        br.close();
+	        
+	        String path = String.format("src/application/Level%d.fxml", lvl);
+	        String title = String.format("Level %d", lvl);
+	    	FXMLLoader fxmlLoader = new FXMLLoader();
+	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
+	        Scene scene1 = new Scene(child1, 700,600);
+	
+	
+			Stage secondaryStage = new Stage();
+			secondaryStage.setTitle(title);
+			secondaryStage.setScene(scene1);
+	
+	
+			secondaryStage.show();
+			check_4 = true;
+    	}
     }
 
 
 
     @FXML
     void openLevel5(ActionEvent event) throws IOException, IOException {
-    	lvl = 5;
-        l = 5;
-        j=0;
-        string8 = new String[10][8];
-
-        File quest_file = new File(String.format(file_p, l));
-        BufferedReader br = new BufferedReader(new FileReader(quest_file));
-        while ((line = br.readLine())!= null) {
-            String[] question_array = line.split(";");
-            string8[j] = question_array;
-            j++;
-        }
-        br.close();
-        
-        String path = String.format("src/application/Level%d.fxml", lvl);
-        String title = String.format("Level %d", lvl);
-    	FXMLLoader fxmlLoader = new FXMLLoader();
-        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-        Scene scene1 = new Scene(child1, 700,600);
-
-
-		Stage secondaryStage = new Stage();
-		secondaryStage.setTitle(title);
-		secondaryStage.setScene(scene1);
-
-
-		secondaryStage.show();
+    	if(check_5 = false) {
+	    	lvl = 5;
+	        l = 5;
+	        j=0;
+	        string8 = new String[10][8];
+	
+	        File quest_file = new File(String.format(file_p, l));
+	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
+	        while ((line = br.readLine())!= null) {
+	            String[] question_array = line.split(";");
+	            string8[j] = question_array;
+	            j++;
+	        }
+	        br.close();
+	        
+	        String path = String.format("src/application/Level%d.fxml", lvl);
+	        String title = String.format("Level %d", lvl);
+	    	FXMLLoader fxmlLoader = new FXMLLoader();
+	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
+	        Scene scene1 = new Scene(child1, 700,600);
+	
+	
+			Stage secondaryStage = new Stage();
+			secondaryStage.setTitle(title);
+			secondaryStage.setScene(scene1);
+	
+	
+			secondaryStage.show();
+			check_5 = true;
+    	}
     }
     
     @FXML
     void openLevel6(ActionEvent event) throws IOException, IOException {
-    	lvl = 6;
-        l = 6;
-        j=0;
-        string8 = new String[8][8];
-
-        File quest_file = new File(String.format(file_p, l));
-        BufferedReader br = new BufferedReader(new FileReader(quest_file));
-        while ((line = br.readLine())!= null) {
-            String[] question_array = line.split(";");
-            string8[j] = question_array;
-            j++;
-        }
-        br.close();
-        
-        String path = String.format("src/application/Level%d.fxml", lvl);
-        String title = String.format("Level %d", lvl);
-    	FXMLLoader fxmlLoader = new FXMLLoader();
-        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-        Scene scene1 = new Scene(child1, 700,600);
-
-
-		Stage secondaryStage = new Stage();
-		secondaryStage.setTitle(title);
-		secondaryStage.setScene(scene1);
-
-
-		secondaryStage.show();
+    	if(check_6 = false) {
+	    	lvl = 6;
+	        l = 6;
+	        j=0;
+	        string8 = new String[8][8];
+	
+	        File quest_file = new File(String.format(file_p, l));
+	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
+	        while ((line = br.readLine())!= null) {
+	            String[] question_array = line.split(";");
+	            string8[j] = question_array;
+	            j++;
+	        }
+	        br.close();
+	        
+	        String path = String.format("src/application/Level%d.fxml", lvl);
+	        String title = String.format("Level %d", lvl);
+	    	FXMLLoader fxmlLoader = new FXMLLoader();
+	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
+	        Scene scene1 = new Scene(child1, 700,600);
+	
+	
+			Stage secondaryStage = new Stage();
+			secondaryStage.setTitle(title);
+			secondaryStage.setScene(scene1);
+	
+	
+			secondaryStage.show();
+			check_6 = true;
+    	}
     }
 
     @FXML
     void openLevel7(ActionEvent event) throws IOException, IOException {
-    	lvl = 7;
-        l = 7;
-        j=0;
-        string8 = new String[20][8];
-
-        File quest_file = new File(String.format(file_p, l));
-        BufferedReader br = new BufferedReader(new FileReader(quest_file));
-        while ((line = br.readLine())!= null) {
-            String[] question_array = line.split(";");
-            string8[j] = question_array;
-            j++;
-        }
-        br.close();
-        
-        String path = String.format("src/application/Level%d.fxml", lvl);
-        String title = String.format("Level %d", lvl);
-    	FXMLLoader fxmlLoader = new FXMLLoader();
-        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-        Scene scene1 = new Scene(child1, 700,600);
-
-
-		Stage secondaryStage = new Stage();
-		secondaryStage.setTitle(title);
-		secondaryStage.setScene(scene1);
-
-
-		secondaryStage.show();
+    	if(check_7 = false) {
+	    	lvl = 7;
+	        l = 7;
+	        j=0;
+	        string8 = new String[20][8];
+	
+	        File quest_file = new File(String.format(file_p, l));
+	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
+	        while ((line = br.readLine())!= null) {
+	            String[] question_array = line.split(";");
+	            string8[j] = question_array;
+	            j++;
+	        }
+	        br.close();
+	        
+	        String path = String.format("src/application/Level%d.fxml", lvl);
+	        String title = String.format("Level %d", lvl);
+	    	FXMLLoader fxmlLoader = new FXMLLoader();
+	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
+	        Scene scene1 = new Scene(child1, 700,600);
+	
+	
+			Stage secondaryStage = new Stage();
+			secondaryStage.setTitle(title);
+			secondaryStage.setScene(scene1);
+	
+	
+			secondaryStage.show();
+			check_7=true;
+    	}
     	
     }
     
     @FXML
     void openLevel1(ActionEvent event) throws IOException, IOException {
+    	if(check_1 = false) {
 
 
-    	lvl = 1;
-        l = 1;
-        j=0;
-        string8 = new String[5][8];
-
-        File quest_file = new File(String.format(file_p, l));
-        BufferedReader br = new BufferedReader(new FileReader(quest_file));
-        while ((line = br.readLine())!= null) {
-            String[] question_array = line.split(";");
-            string8[j] = question_array;
-            j++;
-        }
-        br.close();
-        
-        String path = String.format("src/application/Level%d.fxml", lvl);
-        String title = String.format("Level %d", lvl);
-    	FXMLLoader fxmlLoader = new FXMLLoader();
-        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-        Scene scene1 = new Scene(child1, 700,600);
-
-
-		Stage secondaryStage = new Stage();
-		secondaryStage.setTitle(title);
-		secondaryStage.setScene(scene1);
-
-
-		secondaryStage.show();
+	    	lvl = 1;
+	        l = 1;
+	        j=0;
+	        string8 = new String[5][8];
+	
+	        File quest_file = new File(String.format(file_p, l));
+	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
+	        while ((line = br.readLine())!= null) {
+	            String[] question_array = line.split(";");
+	            string8[j] = question_array;
+	            j++;
+	        }
+	        br.close();
+	        
+	        String path = String.format("src/application/Level%d.fxml", lvl);
+	        String title = String.format("Level %d", lvl);
+	    	FXMLLoader fxmlLoader = new FXMLLoader();
+	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
+	        Scene scene1 = new Scene(child1, 700,600);
+	
+	
+			Stage secondaryStage = new Stage();
+			secondaryStage.setTitle(title);
+			secondaryStage.setScene(scene1);
+	
+	
+			secondaryStage.show();
+			check_1 = true;
+    	}
 			
 
     }
