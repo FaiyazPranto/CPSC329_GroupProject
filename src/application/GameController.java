@@ -38,6 +38,7 @@ public class GameController {
     Boolean check_6 = false;
     Boolean check_7 = false;
     Boolean check_8 = false;
+    public static int current = 0;
 	
 	@FXML
     private Button level5;
@@ -111,10 +112,32 @@ public class GameController {
     
     @FXML
     private	Button update_button;
+    
+ 
 
     @FXML
     void update(ActionEvent event) {
     	String update_message = String.format("%d/320", o_point);
+    	String i_update = String.format("Score: %d/15", LevelsController.get_point());
+    	
+    	if(current == 1) {
+    		label1.setText(i_update);
+    	}
+    	else if(current == 2) {
+    		label2.setText(i_update);
+    	}
+    	else if(current == 3) {
+    		label3.setText(i_update);
+    	}
+    	else if(current == 4) {
+    		label4.setText(i_update);
+    	}
+    	else if(current == 5) {
+    		label5.setText(i_update);
+    	}
+    	else if(current == 6) {
+    		label6.setText(i_update);
+    	}
     	main_label.setText(update_message); 
     }
     
@@ -125,38 +148,7 @@ public class GameController {
     }
 
     
-    @FXML
-    void openLevel8(ActionEvent level1Start) throws Exception {
-    	
-	        lvl = 8;
-	        l = 8;
-	        j=0;
-	        string8 = new String[20][8];
-	
-	        File quest_file = new File(String.format(file_p, l));
-	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
-	        while ((line = br.readLine())!= null) {
-	            String[] question_array = line.split(";");
-	            string8[j] = question_array;
-	            j++;
-	        }
-	        
-	        String path = String.format("src/application/Level%d.fxml", lvl);
-	        String title = String.format("Level %d", lvl);
-	    	FXMLLoader fxmlLoader = new FXMLLoader();
-	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-	        Scene scene1 = new Scene(child1, 700,600);
-	
-	
-			Stage secondaryStage = new Stage();
-			secondaryStage.setTitle(title);
-			secondaryStage.setScene(scene1);
-	
-	
-			secondaryStage.show();
-    	
-    	
-    }
+ 
 
     private Object quizAnswers(Scene level1Scene) {
 		return null;
@@ -164,10 +156,10 @@ public class GameController {
 
 	@FXML
     void openLevel2(ActionEvent event) throws IOException {
-		if(check_2 = false) {
+			current = 2;
 			lvl = 2;
 	        l = 2;
-	        j=0;
+	        j = 0;
 	        string8 = new String[7][8];
 	
 	        File quest_file = new File(String.format(file_p, l));
@@ -179,7 +171,7 @@ public class GameController {
 	        }
 	        
 	        String path = String.format("src/application/Level%d.fxml", lvl);
-	        String title = String.format("Level %d", lvl);
+	        String title = String.format("Level %d", 2);
 	    	FXMLLoader fxmlLoader = new FXMLLoader();
 	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
 	        Scene scene1 = new Scene(child1, 700,600);
@@ -192,18 +184,18 @@ public class GameController {
 	
 			secondaryStage.show();
 			check_2 = true;
-		}
+		
 
 
     }
 
     @FXML
     void openLevel3(ActionEvent event) throws IOException, IOException {
-    	if(check_3 = false) {
-	    	lvl = 3;
-	        l = 3;
+    		current = 3;
+	    	lvl = 5;
+	        l = 5;
 	        j=0;
-	        string8 = new String[6][8];
+	        string8 = new String[15][8];
 	
 	        File quest_file = new File(String.format(file_p, l));
 	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
@@ -214,7 +206,7 @@ public class GameController {
 	        }
 	        br.close();
 	        String path = String.format("src/application/Level%d.fxml", lvl);
-	        String title = String.format("Level %d", lvl);
+	        String title = String.format("Level %d", 3);
 	    	FXMLLoader fxmlLoader = new FXMLLoader();
 	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
 	        Scene scene1 = new Scene(child1, 700,600);
@@ -227,16 +219,16 @@ public class GameController {
 	
 			secondaryStage.show();
 			check_3=true;
-    	}
+    	
     }
 
     @FXML
     void openLevel4(ActionEvent event) throws IOException, IOException {
-    	if(check_4 = false) {
-	    	lvl = 4;
-	        l = 4;
+    		current = 4;
+	    	lvl = 6;
+	        l = 6;
 	        j=0;
-	        string8 = new String[10][8];
+	        string8 = new String[15][8];
 	
 	        File quest_file = new File(String.format(file_p, l));
 	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
@@ -248,7 +240,7 @@ public class GameController {
 	        br.close();
 	        
 	        String path = String.format("src/application/Level%d.fxml", lvl);
-	        String title = String.format("Level %d", lvl);
+	        String title = String.format("Level %d", 4);
 	    	FXMLLoader fxmlLoader = new FXMLLoader();
 	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
 	        Scene scene1 = new Scene(child1, 700,600);
@@ -261,18 +253,18 @@ public class GameController {
 	
 			secondaryStage.show();
 			check_4 = true;
-    	}
+    	
     }
 
 
 
     @FXML
     void openLevel5(ActionEvent event) throws IOException, IOException {
-    	if(check_5 = false) {
-	    	lvl = 5;
-	        l = 5;
+    		current = 5;	
+	    	lvl = 7;
+	        l = 7;
 	        j=0;
-	        string8 = new String[10][8];
+	        string8 = new String[15][8];
 	
 	        File quest_file = new File(String.format(file_p, l));
 	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
@@ -284,7 +276,7 @@ public class GameController {
 	        br.close();
 	        
 	        String path = String.format("src/application/Level%d.fxml", lvl);
-	        String title = String.format("Level %d", lvl);
+	        String title = String.format("Level %d", 5);
 	    	FXMLLoader fxmlLoader = new FXMLLoader();
 	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
 	        Scene scene1 = new Scene(child1, 700,600);
@@ -297,16 +289,16 @@ public class GameController {
 	
 			secondaryStage.show();
 			check_5 = true;
-    	}
+    	
     }
     
     @FXML
     void openLevel6(ActionEvent event) throws IOException, IOException {
-    	if(check_6 = false) {
-	    	lvl = 6;
-	        l = 6;
+    		current = 6;
+	    	lvl = 8;
+	        l = 8;
 	        j=0;
-	        string8 = new String[8][8];
+	        string8 = new String[15][8];
 	
 	        File quest_file = new File(String.format(file_p, l));
 	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
@@ -318,7 +310,7 @@ public class GameController {
 	        br.close();
 	        
 	        String path = String.format("src/application/Level%d.fxml", lvl);
-	        String title = String.format("Level %d", lvl);
+	        String title = String.format("Level %d", 6);
 	    	FXMLLoader fxmlLoader = new FXMLLoader();
 	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
 	        Scene scene1 = new Scene(child1, 700,600);
@@ -331,53 +323,20 @@ public class GameController {
 	
 			secondaryStage.show();
 			check_6 = true;
-    	}
-    }
-
-    @FXML
-    void openLevel7(ActionEvent event) throws IOException, IOException {
-    	if(check_7 = false) {
-	    	lvl = 7;
-	        l = 7;
-	        j=0;
-	        string8 = new String[20][8];
-	
-	        File quest_file = new File(String.format(file_p, l));
-	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
-	        while ((line = br.readLine())!= null) {
-	            String[] question_array = line.split(";");
-	            string8[j] = question_array;
-	            j++;
-	        }
-	        br.close();
-	        
-	        String path = String.format("src/application/Level%d.fxml", lvl);
-	        String title = String.format("Level %d", lvl);
-	    	FXMLLoader fxmlLoader = new FXMLLoader();
-	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-	        Scene scene1 = new Scene(child1, 700,600);
-	
-	
-			Stage secondaryStage = new Stage();
-			secondaryStage.setTitle(title);
-			secondaryStage.setScene(scene1);
-	
-	
-			secondaryStage.show();
-			check_7=true;
-    	}
     	
     }
+
+   
     
     @FXML
     void openLevel1(ActionEvent event) throws IOException, IOException {
-    	if(check_1 = false) {
+    	
 
-
+    		current = 1;
 	    	lvl = 1;
 	        l = 1;
 	        j=0;
-	        string8 = new String[5][8];
+	        string8 = new String[15][8];
 	
 	        File quest_file = new File(String.format(file_p, l));
 	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
@@ -401,8 +360,8 @@ public class GameController {
 	
 	
 			secondaryStage.show();
-			check_1 = true;
-    	}
+			
+    	
 			
 
     }
@@ -430,6 +389,14 @@ public class GameController {
         o_point += point;
         String k = String.format("%d",o_point);
         String n = String.format("%d",point);
+    }
+    
+    public static void deduct() {
+    	o_point-=1;
+    }
+    
+    public static int current_level() {
+    	return current;
     }
 
 

@@ -53,9 +53,9 @@ public class LevelsController<option1> {
 	int i = 1;
 	boolean check = false;
 	int q_num = 1;
-	static int level_point=0;
+	public static int level_point=0;
 
-	static int get_point() {
+	public static int get_point() {
 		return level_point;
 	}
 
@@ -88,7 +88,6 @@ public class LevelsController<option1> {
 					i++;
 					if(i == string8.length){
 						Next_button.setText("End");
-						GameController.seto_point(level_point);
 					}
 
 				}
@@ -130,6 +129,7 @@ public class LevelsController<option1> {
 				if (option1.getText().equals(correct)) {
 					Hint_box.setText("CORRECT!!\n" + string8[i - 1][6]);
 					level_point+=2;
+					GameController.seto_point(2);
 				} else {
 					Hint_box.setText("WRONG!!\n" + string8[i - 1][6]);
 				}
@@ -138,6 +138,7 @@ public class LevelsController<option1> {
 				if (option2.getText().equals(correct)) {
 					Hint_box.setText("CORRECT!!\n" + string8[i-1][6]);
 					level_point+=2;
+					GameController.seto_point(2);
 				} else {
 					Hint_box.setText("WRONG!!\n" + string8[i - 1][6]);
 				}
@@ -146,6 +147,7 @@ public class LevelsController<option1> {
 				if (option3.getText().equals(correct)) {
 					Hint_box.setText("CORRECT!!\n" + string8[i - 1][6]);
 					level_point+=2;
+					GameController.seto_point(2);
 				} else {
 					Hint_box.setText("WRONG!!\n" + string8[i - 1][6]);
 				}
@@ -154,6 +156,7 @@ public class LevelsController<option1> {
 				if (option4.getText().equals(correct)) {
 					Hint_box.setText("CORRECT!!\n" + string8[i - 1][6]);
 					level_point+=2;
+					GameController.seto_point(2);
 				} else {
 					Hint_box.setText("WRONG!!\n" + string8[i - 1][6]);
 				}
@@ -166,8 +169,11 @@ public class LevelsController<option1> {
 	void give_hint(ActionEvent event) {
 		Hint_box.setText(string8[i-1][string8[i].length-1]);
 		level_point-=1;
+		GameController.deduct();
 
 	}
+	
+
 
 }
 

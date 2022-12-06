@@ -10,7 +10,7 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GameController">
    <children>
-      <AnchorPane prefHeight="698.0" prefWidth="600.0" style="-fx-background-color: lavender;">
+      <AnchorPane prefHeight="669.0" prefWidth="600.0" style="-fx-background-color: lavender;">
          <children>
             <Label layoutX="4.0" prefHeight="72.0" prefWidth="592.0" text="              Welcome to the CPSC 329 Trivia Game!" textAlignment="CENTER">
                <font>
@@ -18,68 +18,54 @@
                </font>
             </Label>
             <Label layoutX="174.0" layoutY="87.0" prefHeight="21.0" prefWidth="252.0" text="Please select a level to start the game" textAlignment="CENTER" />
-            <Label layoutX="31.0" layoutY="139.0" prefHeight="35.0" prefWidth="187.0" text="Level 1  ~Security~">
+            <Label layoutX="63.0" layoutY="147.0" prefHeight="35.0" prefWidth="234.0" text="Level 1  ~Security &amp; Privacy~">
                <font>
                   <Font name="Times New Roman Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Button id="level1Start" fx:id="level1" layoutX="298.0" layoutY="141.0" mnemonicParsing="false" onAction="#openLevel1" text="Start!" textFill="#44c26b" />
-            <Label id="level1Score" fx:id="label1" layoutX="406.0" layoutY="146.0" text="Score: 0/10" />
-            <Label id="totalScore" fx:id="main_label" layoutX="261.0" layoutY="565.0" text="    ">
+            <Button id="level1Start" fx:id="level1" layoutX="398.0" layoutY="149.0" mnemonicParsing="false" onAction="#openLevel1" text="Start!" textFill="#44c26b" />
+            <Label id="totalScore" fx:id="main_label" layoutX="252.0" layoutY="500.0" text="    ">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="31.0" layoutY="189.0" prefHeight="35.0" prefWidth="187.0" text="Level 2  ~Privacy~">
+            <Label layoutX="63.0" layoutY="194.0" prefHeight="35.0" prefWidth="222.0" text="Level 2  ~Authentication~">
                <font>
                   <Font name="Times New Roman Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="31.0" layoutY="236.0" prefHeight="35.0" prefWidth="187.0" text="Level 3  ~Passwords~">
+            <Button id="level3Start" fx:id="level2" layoutX="398.0" layoutY="196.0" mnemonicParsing="false" onAction="#openLevel2" text="Start!" textFill="#44c26b" />
+            <Button id="level5Start" fx:id="level3" layoutX="398.0" layoutY="245.0" mnemonicParsing="false" onAction="#openLevel3" text="Start!" textFill="#44c26b" />
+            <Button id="level6Start" fx:id="level4" layoutX="398.0" layoutY="292.0" mnemonicParsing="false" onAction="#openLevel4" text="Start!" textFill="#44c26b" />
+            <Label layoutX="63.0" layoutY="243.0" prefHeight="35.0" prefWidth="202.0" text="Level 3  ~Access Control~">
                <font>
                   <Font name="Times New Roman Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Button id="level2Start" fx:id="level2" layoutX="298.0" layoutY="191.0" mnemonicParsing="false" onAction="#openLevel2" text="Start!" textFill="#44c26b" />
-            <Button id="level3Start" fx:id="level3" layoutX="298.0" layoutY="238.0" mnemonicParsing="false" onAction="#openLevel3" text="Start!" textFill="#44c26b" />
-            <Button id="level4Start" fx:id="level4" layoutX="298.0" layoutY="285.0" mnemonicParsing="false" onAction="#openLevel4" text="Start!" textFill="#44c26b" />
-            <Button id="level5Start" fx:id="level5" layoutX="298.0" layoutY="334.0" mnemonicParsing="false" onAction="#openLevel5" text="Start!" textFill="#44c26b" />
-            <Button id="level6Start" fx:id="level6" layoutX="298.0" layoutY="382.0" mnemonicParsing="false" onAction="#openLevel6" text="Start!" textFill="#44c26b" />
-            <Label layoutX="33.0" layoutY="283.0" prefHeight="35.0" prefWidth="187.0" text="Level 4  ~Biometrics~">
+            <Label layoutX="63.0" layoutY="290.0" prefHeight="35.0" prefWidth="187.0" text="Level 4  ~Malware~">
                <font>
                   <Font name="Times New Roman Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="33.0" layoutY="332.0" prefHeight="35.0" prefWidth="202.0" text="Level 5  ~Access Control~">
+            <Label layoutX="63.0" layoutY="338.0" prefHeight="35.0" prefWidth="187.0" text="Level 5  ~Binary~">
                <font>
                   <Font name="Times New Roman Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="33.0" layoutY="380.0" prefHeight="35.0" prefWidth="187.0" text="Level 6  ~Malware~">
+            <Button id="level6Start" fx:id="level5" layoutX="398.0" layoutY="340.0" mnemonicParsing="false" onAction="#openLevel5" text="Start!" textFill="#44c26b" />
+            <Label layoutX="63.0" layoutY="389.0" prefHeight="35.0" prefWidth="187.0" text="Level 6  ~Crypto~" wrapText="true">
                <font>
                   <Font name="Times New Roman Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label id="level5Score" fx:id="label5" layoutX="406.0" layoutY="339.0" text="Score: 0/10" />
-            <Label id="level2Score" fx:id="label2" layoutX="406.0" layoutY="196.0" text="Score: 0/10" />
-            <Label id="level4Score" fx:id="label4" layoutX="406.0" layoutY="290.0" text="Score: 0/10" />
-            <Label id="level3Score" fx:id="label3" layoutX="406.0" layoutY="243.0" text="Score: 0/10" />
-            <Label id="level6Score" fx:id="label6" layoutX="406.0" layoutY="387.0" text="Score: 0/10" />
-            <Label layoutX="33.0" layoutY="429.0" prefHeight="35.0" prefWidth="187.0" text="Level 7  ~Binary~">
-               <font>
-                  <Font name="Times New Roman Bold Italic" size="18.0" />
-               </font>
-            </Label>
-            <Button id="level6Start" fx:id="level61" layoutX="298.0" layoutY="431.0" mnemonicParsing="false" onAction="#openLevel6" text="Start!" textFill="#44c26b" />
-            <Label id="level6Score" fx:id="label61" layoutX="406.0" layoutY="436.0" text="Score: 0/10" />
-            <Label layoutX="31.0" layoutY="479.0" prefHeight="35.0" prefWidth="187.0" text="Level 8  ~Crypto~" wrapText="true">
-               <font>
-                  <Font name="Times New Roman Bold Italic" size="18.0" />
-               </font>
-            </Label>
-            <Button id="level6Start" fx:id="level611" layoutX="298.0" layoutY="481.0" mnemonicParsing="false" onAction="#openLevel8" text="Start!" textFill="#44c26b" />
-            <Label id="level6Score" fx:id="label611" layoutX="406.0" layoutY="486.0" text="Score: 0/10" />
-            <Button fx:id="update_button" layoutX="219.0" layoutY="534.0" mnemonicParsing="false" onAction="#update" text="Click to update score" />
+            <Button id="level6Start" fx:id="level6" layoutX="398.0" layoutY="391.0" mnemonicParsing="false" onAction="#openLevel6" text="Start!" textFill="#44c26b" />
+            <Button fx:id="update_button" layoutX="233.0" layoutY="452.0" mnemonicParsing="false" onAction="#update" text="Click to update score" />
+            <Label fx:id="label1" layoutX="482.0" layoutY="154.0" text="Score: 0/15" />
+            <Label fx:id="label2" layoutX="482.0" layoutY="201.0" text="Score: 0/15" />
+            <Label fx:id="label3" layoutX="482.0" layoutY="250.0" text="Score: 0/15" />
+            <Label fx:id="label4" layoutX="482.0" layoutY="297.0" text="Score: 0/15" />
+            <Label fx:id="label5" layoutX="482.0" layoutY="345.0" text="Score: 0/15" />
+            <Label fx:id="label6" layoutX="482.0" layoutY="396.0" text="Score: 0/15" />
          </children>
       </AnchorPane>
    </children>

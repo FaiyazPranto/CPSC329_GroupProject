@@ -23,8 +23,11 @@
             <Button id="submitButton" fx:id="Submit_button" layoutX="495.0" layoutY="321.0" mnemonicParsing="false" onAction="#validate" text="Submit" />
             <TextArea id="questionTextArea" fx:id="Hint_box" layoutX="13.0" layoutY="366.0" prefHeight="227.0" prefWidth="671.0" />
             <Button id="hintButton" fx:id="Hint_button" layoutX="31.0" layoutY="321.0" mnemonicParsing="false" onAction="#give_hint" text="Hint! (-1 point)" />
-            <ProgressBar id="progressBar" layoutX="429.0" layoutY="36.0" prefWidth="200.0" progress="0.0" />
-            <Label layoutX="643.0" layoutY="37.0" prefHeight="21.0" prefWidth="41.0" text="0%" />
+			<Label layoutX="545.0" layoutY="34.0" text="2 points">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>         
          </children>
       </AnchorPane>
    </children>
