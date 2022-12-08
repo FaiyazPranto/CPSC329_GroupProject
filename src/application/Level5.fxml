@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LevelsController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LevelsController">
    <children>
       <AnchorPane prefHeight="614.0" prefWidth="696.0" style="-fx-background-color: linen;">
          <children>
@@ -19,13 +19,13 @@
             <CheckBox id="choice2" fx:id="option2" layoutX="31.0" layoutY="170.0" mnemonicParsing="false" text="Student’s assignment files" />
             <CheckBox id="choice3" fx:id="option3" layoutX="31.0" layoutY="211.0" mnemonicParsing="false" text="Password manager system" />
             <CheckBox id="choice4" fx:id="option4" layoutX="31.0" layoutY="253.0" mnemonicParsing="false" text="Course homepage" />
-            <Button id="nextQuestion" fx:id="Next_button" layoutX="591.0" layoutY="321.0" mnemonicParsing="false" onAction="#go_next" text="Next &gt;" />
-            <Button id="submitButton" fx:id="Submit_button" layoutX="495.0" layoutY="321.0" mnemonicParsing="false" onAction="#validate" text="Submit" />
-            <TextArea id="questionTextArea" fx:id="Hint_box" layoutX="13.0" layoutY="366.0" prefHeight="227.0" prefWidth="671.0" />
-            <Button id="hintButton" fx:id="Hint_button" layoutX="31.0" layoutY="321.0" mnemonicParsing="false" onAction="#give_hint" text="Hint! (-1 point)" />
-         	<Label layoutX="545.0" layoutY="34.0" text="2 points">
+            <Button id="nextQuestion" fx:id="Next_button" layoutX="860.0" layoutY="321.0" mnemonicParsing="false" onAction="#go_next" text="Next &gt;" />
+            <Button id="submitButton" fx:id="Submit_button" layoutX="675.0" layoutY="321.0" mnemonicParsing="false" onAction="#validate" text="Submit" />
+            <TextArea id="questionTextArea" fx:id="Hint_box" layoutX="13.0" layoutY="366.0" prefHeight="227.0" prefWidth="963.0" />
+            <Button id="hintButton" fx:id="Hint_button" layoutX="75.0" layoutY="321.0" mnemonicParsing="false" onAction="#give_hint" text="Hint! (-1 point)" />
+            <Label layoutX="868.0" layoutY="28.0" text="2 points" underline="true">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
          </children>

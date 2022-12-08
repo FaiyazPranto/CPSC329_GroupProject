@@ -18,14 +18,14 @@
             <CheckBox id="choice1" fx:id="option1" layoutX="31.0" layoutY="126.0" mnemonicParsing="false" text="Binary Number System is an exact copy of the Decimal Number System,making it easy for both humans and computers to read the same number" />
             <CheckBox id="choice2" fx:id="option2" layoutX="31.0" layoutY="170.0" mnemonicParsing="false" text="Binary numbers can be perfectly stored and reproduced by computers" />
             <CheckBox id="choice3" fx:id="option3" layoutX="31.0" layoutY="211.0" mnemonicParsing="false" text="Binary numbers are perfect for computers who are easily able to store three different bit states for each binary digit" />
-            <CheckBox id="choice4" fx:id="option4" layoutX="31.0" layoutY="253.0" mnemonicParsing="false" text="Binary numbers can be perfectly stored and reproduced by computers;Binary numbers are perfect for computers who are easily able to store three different bit states for each binary digit;Binary numbers are better for computers than decimal numbers as computers have difficulty determining value of numbers by digit position" />
-            <Button id="nextQuestion" fx:id="Next_button" layoutX="591.0" layoutY="321.0" mnemonicParsing="false" onAction="#go_next" text="Next &gt;" />
-            <Button id="submitButton" fx:id="Submit_button" layoutX="495.0" layoutY="321.0" mnemonicParsing="false" onAction="#validate" text="Submit" />
-            <TextArea id="questionTextArea" fx:id="Hint_box" layoutX="13.0" layoutY="366.0" prefHeight="227.0" prefWidth="671.0" />
-            <Button id="hintButton" fx:id="Hint_button" layoutX="31.0" layoutY="321.0" mnemonicParsing="false" onAction="#give_hint" text="Hint! (-1 point)" />
-			<Label layoutX="545.0" layoutY="34.0" text="2 points">
+            <CheckBox id="choice4" fx:id="option4" layoutX="31.0" layoutY="253.0" mnemonicParsing="false" text="Binary numbers are better for computers than decimal numbers as computers have difficulty determining value of numbers by digit position" />
+            <Button id="nextQuestion" fx:id="Next_button" layoutX="860.0" layoutY="321.0" mnemonicParsing="false" onAction="#go_next" text="Next &gt;" />
+            <Button id="submitButton" fx:id="Submit_button" layoutX="675.0" layoutY="321.0" mnemonicParsing="false" onAction="#validate" text="Submit" />
+            <TextArea id="questionTextArea" fx:id="Hint_box" layoutX="13.0" layoutY="366.0" prefHeight="227.0" prefWidth="963.0" />
+            <Button id="hintButton" fx:id="Hint_button" layoutX="75.0" layoutY="321.0" mnemonicParsing="false" onAction="#give_hint" text="Hint! (-1 point)" />
+            <Label layoutX="868.0" layoutY="28.0" text="2 points" underline="true">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>         
          </children>

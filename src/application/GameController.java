@@ -21,24 +21,24 @@ import javafx.stage.Stage;
 
 public class GameController {
 	
-	public static String[][] string8 = new String[20][8];
+	public static String[][] string8;
     int l;
-    String file_p = "src/application/Level%dQ.txt";
+    String file_p = "Resources/Level%dQ.txt";
     String line;
     int j = 0;
 	Stage applicationStage;
     int lvl;
     public static int o_point = 0;
-    String points = "Total Score: %d/320";
-    Boolean check_1 = false;
-    Boolean check_2 = false;
-    Boolean check_3 = false;
-    Boolean check_4 = false;
-    Boolean check_5 = false;
-    Boolean check_6 = false;
-    Boolean check_7 = false;
-    Boolean check_8 = false;
-    public static int current = 0;
+    String points = "Total Score: %d/180";
+   
+    int current1 = 0;
+    int current2 = 0;
+    int current3 = 0;
+    int current4 = 0;
+    int current5 = 0;
+    int current6 = 0;
+    int last_button;
+    int update_check = 0;
 	
 	@FXML
     private Button level5;
@@ -117,25 +117,26 @@ public class GameController {
 
     @FXML
     void update(ActionEvent event) {
-    	String update_message = String.format("%d/320", o_point);
-    	String i_update = String.format("Score: %d/15", LevelsController.get_point());
+    	update_check = 0;
+    	String update_message = String.format("%d/180", o_point);
+    	String i_update = String.format("Score: %d/30", LevelsController.get_point());
     	
-    	if(current == 1) {
+    	if(current1 == 1 && last_button == 1) {
     		label1.setText(i_update);
     	}
-    	else if(current == 2) {
+    	else if(current2 == 1 && last_button == 2) {
     		label2.setText(i_update);
     	}
-    	else if(current == 3) {
+    	else if(current3 == 1 && last_button == 3) {
     		label3.setText(i_update);
     	}
-    	else if(current == 4) {
+    	else if(current4 == 1 && last_button == 4) {
     		label4.setText(i_update);
     	}
-    	else if(current == 5) {
+    	else if(current5 == 1 && last_button == 5) {
     		label5.setText(i_update);
     	}
-    	else if(current == 6) {
+    	else if(current6 == 1 && last_button == 6) {
     		label6.setText(i_update);
     	}
     	main_label.setText(update_message); 
@@ -156,11 +157,13 @@ public class GameController {
 
 	@FXML
     void openLevel2(ActionEvent event) throws IOException {
-			current = 2;
-			lvl = 2;
-	        l = 2;
+		if(update_check == 0 && current2 == 0) {
+			current2 = 1;
+			lvl = 3;
+	        l = 3;
 	        j = 0;
-	        string8 = new String[7][8];
+	        last_button = 2;
+	        string8 = new String[15][8];
 	
 	        File quest_file = new File(String.format(file_p, l));
 	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
@@ -174,7 +177,7 @@ public class GameController {
 	        String title = String.format("Level %d", 2);
 	    	FXMLLoader fxmlLoader = new FXMLLoader();
 	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-	        Scene scene1 = new Scene(child1, 700,600);
+	        Scene scene1 = new Scene(child1, 1000,600);
 	
 	
 			Stage secondaryStage = new Stage();
@@ -183,7 +186,9 @@ public class GameController {
 	
 	
 			secondaryStage.show();
-			check_2 = true;
+			update_check = 1;
+		}
+		
 		
 
 
@@ -191,10 +196,12 @@ public class GameController {
 
     @FXML
     void openLevel3(ActionEvent event) throws IOException, IOException {
-    		current = 3;
+    	if(update_check == 0 && current3 == 0) {
+    		current3 = 1;
 	    	lvl = 5;
 	        l = 5;
 	        j=0;
+	        last_button = 3;
 	        string8 = new String[15][8];
 	
 	        File quest_file = new File(String.format(file_p, l));
@@ -209,7 +216,7 @@ public class GameController {
 	        String title = String.format("Level %d", 3);
 	    	FXMLLoader fxmlLoader = new FXMLLoader();
 	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-	        Scene scene1 = new Scene(child1, 700,600);
+	        Scene scene1 = new Scene(child1, 1000,600);
 	
 	
 			Stage secondaryStage = new Stage();
@@ -218,16 +225,19 @@ public class GameController {
 	
 	
 			secondaryStage.show();
-			check_3=true;
+			update_check = 3;
+    	}
     	
     }
 
     @FXML
     void openLevel4(ActionEvent event) throws IOException, IOException {
-    		current = 4;
+    	if(update_check == 0 && current4 == 0) {
+    		current4 = 1;
 	    	lvl = 6;
 	        l = 6;
-	        j=0;
+	        j=0; 
+	        last_button = 4;
 	        string8 = new String[15][8];
 	
 	        File quest_file = new File(String.format(file_p, l));
@@ -243,7 +253,7 @@ public class GameController {
 	        String title = String.format("Level %d", 4);
 	    	FXMLLoader fxmlLoader = new FXMLLoader();
 	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-	        Scene scene1 = new Scene(child1, 700,600);
+	        Scene scene1 = new Scene(child1, 1000,600);
 	
 	
 			Stage secondaryStage = new Stage();
@@ -252,7 +262,8 @@ public class GameController {
 	
 	
 			secondaryStage.show();
-			check_4 = true;
+			update_check = 1;
+    	}
     	
     }
 
@@ -260,10 +271,12 @@ public class GameController {
 
     @FXML
     void openLevel5(ActionEvent event) throws IOException, IOException {
-    		current = 5;	
+    	if(update_check == 0 && current5 == 0) {
+    		current5 = 1;	
 	    	lvl = 7;
 	        l = 7;
 	        j=0;
+	        last_button = 5;
 	        string8 = new String[15][8];
 	
 	        File quest_file = new File(String.format(file_p, l));
@@ -279,7 +292,7 @@ public class GameController {
 	        String title = String.format("Level %d", 5);
 	    	FXMLLoader fxmlLoader = new FXMLLoader();
 	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-	        Scene scene1 = new Scene(child1, 700,600);
+	        Scene scene1 = new Scene(child1, 1000,600);
 	
 	
 			Stage secondaryStage = new Stage();
@@ -288,16 +301,19 @@ public class GameController {
 	
 	
 			secondaryStage.show();
-			check_5 = true;
+			update_check = 1;
+    	}
     	
     }
     
     @FXML
     void openLevel6(ActionEvent event) throws IOException, IOException {
-    		current = 6;
+    	if(update_check == 0 && current6 == 0) {
+    		current6 = 1;
 	    	lvl = 8;
 	        l = 8;
 	        j=0;
+	        last_button = 6;
 	        string8 = new String[15][8];
 	
 	        File quest_file = new File(String.format(file_p, l));
@@ -313,7 +329,7 @@ public class GameController {
 	        String title = String.format("Level %d", 6);
 	    	FXMLLoader fxmlLoader = new FXMLLoader();
 	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-	        Scene scene1 = new Scene(child1, 700,600);
+	        Scene scene1 = new Scene(child1, 1000,600);
 	
 	
 			Stage secondaryStage = new Stage();
@@ -322,7 +338,8 @@ public class GameController {
 	
 	
 			secondaryStage.show();
-			check_6 = true;
+			update_check = 1;
+    	}
     	
     }
 
@@ -331,12 +348,13 @@ public class GameController {
     @FXML
     void openLevel1(ActionEvent event) throws IOException, IOException {
     	
-
-    		current = 1;
+    	if(update_check == 0) {
+    		current1 = 1;
 	    	lvl = 1;
 	        l = 1;
 	        j=0;
 	        string8 = new String[15][8];
+	        last_button = 1;
 	
 	        File quest_file = new File(String.format(file_p, l));
 	        BufferedReader br = new BufferedReader(new FileReader(quest_file));
@@ -351,7 +369,7 @@ public class GameController {
 	        String title = String.format("Level %d", lvl);
 	    	FXMLLoader fxmlLoader = new FXMLLoader();
 	        VBox child1 = fxmlLoader.load(new FileInputStream(path));
-	        Scene scene1 = new Scene(child1, 700,600);
+	        Scene scene1 = new Scene(child1, 1000,600);
 	
 	
 			Stage secondaryStage = new Stage();
@@ -360,6 +378,9 @@ public class GameController {
 	
 	
 			secondaryStage.show();
+			update_check = 1;
+			
+    	}
 			
     	
 			
@@ -395,9 +416,7 @@ public class GameController {
     	o_point-=1;
     }
     
-    public static int current_level() {
-    	return current;
-    }
+    
 
 
 

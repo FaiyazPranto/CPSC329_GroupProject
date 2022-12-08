@@ -60,12 +60,17 @@
             </Label>
             <Button id="level6Start" fx:id="level6" layoutX="398.0" layoutY="391.0" mnemonicParsing="false" onAction="#openLevel6" text="Start!" textFill="#44c26b" />
             <Button fx:id="update_button" layoutX="233.0" layoutY="452.0" mnemonicParsing="false" onAction="#update" text="Click to update score" />
-            <Label fx:id="label1" layoutX="482.0" layoutY="154.0" text="Score: 0/15" />
-            <Label fx:id="label2" layoutX="482.0" layoutY="201.0" text="Score: 0/15" />
-            <Label fx:id="label3" layoutX="482.0" layoutY="250.0" text="Score: 0/15" />
-            <Label fx:id="label4" layoutX="482.0" layoutY="297.0" text="Score: 0/15" />
-            <Label fx:id="label5" layoutX="482.0" layoutY="345.0" text="Score: 0/15" />
-            <Label fx:id="label6" layoutX="482.0" layoutY="396.0" text="Score: 0/15" />
+            <Label fx:id="label1" layoutX="482.0" layoutY="154.0" text="Score: 0/30" />
+            <Label fx:id="label2" layoutX="482.0" layoutY="201.0" text="Score: 0/30" />
+            <Label fx:id="label3" layoutX="482.0" layoutY="250.0" text="Score: 0/30" />
+            <Label fx:id="label4" layoutX="482.0" layoutY="297.0" text="Score: 0/30" />
+            <Label fx:id="label5" layoutX="482.0" layoutY="345.0" text="Score: 0/30" />
+            <Label fx:id="label6" layoutX="482.0" layoutY="396.0" text="Score: 0/30" />
+            <Label layoutX="89.0" layoutY="560.0" text="Please click update before advancing to a new level!!">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
